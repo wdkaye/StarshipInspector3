@@ -1,0 +1,38 @@
+<h1 id="tableLabel">Guest Hangar</h1>
+
+<p>Here is a list of starships, available to all users:</p>
+
+@if( !starships )
+{
+    <p><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
+}
+@else
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Ship Name</th>
+                <th>Owner</th>
+                <th>Hull</th>
+                <th>Reactor</th>
+                <th>Thruster</th>
+                <th>Weapon</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for( starship of starships; track $index )  
+            {
+                <tr>
+                    <td>{{ starship.id }}</td>
+                    <td>{{ starship.name }}</td>
+                    <td>{{ starship.owner }}</td>
+                    <td>{{ starship.hullId }}</td>
+                    <td>{{ starship.reactorId }}</td>
+                    <td>{{ starship.thrusterId }}</td>
+                    <td>{{ starship.weaponId }}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
