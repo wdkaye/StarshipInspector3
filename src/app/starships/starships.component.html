@@ -11,26 +11,24 @@
     <table>
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Ship Name</th>
-                <th>Owner</th>
                 <th>Hull</th>
                 <th>Reactor</th>
                 <th>Thruster</th>
                 <th>Weapon</th>
+                <th>Total Mass</th>
             </tr>
         </thead>
         <tbody>
             @for( starship of starships; track $index )  
             {
                 <tr>
-                    <td>{{ starship.id }}</td>
                     <td>{{ starship.name }}</td>
-                    <td>{{ starship.owner }}</td>
-                    <td>{{ starship.hullId }}</td>
-                    <td>{{ starship.reactorId }}</td>
-                    <td>{{ starship.thrusterId }}</td>
-                    <td>{{ starship.weaponId }}</td>
+                    <td>{{ starship.hullName }}</td>
+                    <td>{{ starship.reactorName }}</td>
+                    <td>{{ starship.thrusterName }}</td>
+                    <td>{{ starship.weaponName }}</td>
+                    <td>{{ starship.massTotal }}</td>
                 </tr>
             }
         </tbody>

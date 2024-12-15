@@ -1,9 +1,14 @@
 export interface Starship {
-    id: number;
+    // id: number;
     name: string;
-    owner: string;
-    hullId: number;
-    reactorId: number;
-    thrusterId: number;
-    weaponId: number;
+    // owner: string;
+    hullName: string;
+    reactorName: string;
+    thrusterName: string;
+    weaponName: string;
+    massTotal: number;
+    //hullId: number;
+    //reactorId: number;
+    //thrusterId: number;
+    //weaponId: number;
 }
