@@ -1,6 +1,11 @@
 <header>
   <nav>
-    <a [routerLink]="['/']">Login/Out</a>
+    @if( isLoggedIn ) {
+      <a (click)="onLogout()">Logout</a>
+    }
+    @else {
+      <a [routerLink]="['/login']">Login</a>
+    }
     |
     <a [routerLink]="['/guest']">Guest</a>
     |
