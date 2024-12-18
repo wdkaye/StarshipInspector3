@@ -1,14 +1,14 @@
 <header>
   <nav>
     @if( isLoggedIn ) {
-      <a (click)="onLogout()">Logout</a>
+      <a (click)="onLogout()">Click here to Logout!</a>
     }
     @else {
       <a [routerLink]="['/login']">Login</a>
     }
+    <!--|
+    //<a [routerLink]="['/guest']">Guest</a>-->
     |
-    <a [routerLink]="['/guest']">Guest</a>
-    |
-    <a [routerLink]="['/starships']">Dev</a>
+    <a [routerLink]="['/starships']">Starships</a>
   </nav>
 </header>
